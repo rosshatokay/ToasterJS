@@ -10,9 +10,10 @@
   crossorigin="anonymous"></script>
 
   <script src="/src/toaster.js" charset="utf-8"></script>
+  <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
 
-  <link rel="stylesheet" href="/src/app.css">
-  <link rel="stylesheet" href="/src/toaster.css">
+  <link rel="stylesheet" href="src/app.css">
+  <link rel="stylesheet" href="src/toaster.css">
 </head>
 <body>
 
@@ -25,10 +26,11 @@
       </ul>
       <h4>Properties</h4>
       <ul>
-        <li><a href="">Gettings started</a></li>
-        <li><a href="">Make them stick</a></li>
-        <li><a href="">Change position</a></li>
-        <li><a href="">Embed HTML</a></li>
+        <li><a href="#getting-started">Gettings started</a></li>
+        <li><a href="#hide-after">hideAfter</a></li>
+        <li><a href="#position">Position</a></li>
+        <li><a href="#stacking">Stacking</a></li>
+        <li><a href="#embed-html">Embed HTML</a></li>
       </ul>
     </aside>
 
@@ -43,22 +45,22 @@
           <script src="https://gist.github.com/rosshatokay/365e0c2d2a889d65ac6af83e2080f973.js"></script>
         </section>
 
-        <section>
+        <section id="getting-started">
           <h3>Getting started</h3>
           <p>To generate a basic toast, i.e upon clicking a button, call a <b>$.toast</b> function</p>
           <script src="https://gist.github.com/rosshatokay/dee9093e99cedb368e886752b5638c70.js"></script>
-          <button class="btn primary toast-1">Run code</button>
+          <button class="btn primary toast-1">Click me to toast!</button>
         </section>
 
-        <section>
-          <h3>Make them stick</h3>
+        <section id="hide-after">
+          <h3>hideAfter</h3>
           <p>If you'd like to have the toasts to not fade away, disable the <b>hideAfter</b> property</p>
           <script src="https://gist.github.com/rosshatokay/985b7681618e3146211279c917c84709.js"></script>
-          <button class="btn primary toast-2">Run code</button>
+          <button class="btn primary toast-2">Click me to toast!</button>
         </section>
 
-        <section>
-          <h3>Change position</h3>
+        <section id="position">
+          <h3>Position</h3>
           <p>Changing the position of the toasts is done by setting the <b>position</b>
             property to one of the available position classes:</p>
             <ul>
@@ -68,16 +70,24 @@
               <li>top-right</li>
             </ul>
           <script src="https://gist.github.com/rosshatokay/dbbf4cc59d04e63c3499216c1e0f3212.js"></script>
-          <button class="btn primary toast-3">Run code</button>
+          <button class="btn primary toast-3">Click me to toast on the bottom left corner!</button>
         </section>
 
-        <section>
+        <section id="stacking">
+          <h3>Stacking</h3>
+          <p>Enable or disable stacking of toast elements</p>
+
+          <script src="https://gist.github.com/rosshatokay/123a2a66cd38b045d7d082974289f1dc.js"></script>
+          <button class="btn primary toast-4">Click me to toast!</button>
+        </section>
+
+        <section id="embed-html">
           <h3>Embed HTML</h3>
           <p>You can even change the contents of the toast element to have
             other HTML elements</p>
 
-          <script src="https://gist.github.com/rosshatokay/dbbf4cc59d04e63c3499216c1e0f3212.js"></script>
-          <button class="btn primary">Run code</button>
+          <script src="https://gist.github.com/rosshatokay/0ab65e78794f943b272b99bf9df26a05.js"></script>
+          <button class="btn primary toast-5">Click me to toast with HTML elements!</button>
         </section>
 
       </article>
@@ -96,14 +106,28 @@
 
     $('.toast-2').click(function(){
       $.toast({
-        content: "I'm another toaster",
+        content: "I'm a sticky toaster",
         hideAfter: false
       })
     })
 
     $('.toast-3').click(function(){
       $.toast({
-        content: "I'm toasting on the bottom left",
+        content: "I'm toasting in the corner!",
+        position: "bottom-left"
+      })
+    })
+
+    $('.toast-4').click(function(){
+      $.toast({
+        content: "I won't stack!",
+        stacking: false
+      })
+    })
+
+    $('.toast-5').click(function(){
+      $.toast({
+        content: '<span class="iconify" data-icon="fluent:warning-24-filled" data-height="24"></span> <a href="/" target="_blank">Toaster link!</a>',
         position: "bottom-left"
       })
     })

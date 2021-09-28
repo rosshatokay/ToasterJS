@@ -140,4 +140,12 @@ article .gist {
   margin: 40px 0;
 }
 
+.toast a {
+  text-decoration: underline;
+}
+
+.iconify {
+  margin-right: 10px;
+}
+
 /*# sourceMappingURL=app.css.map */
