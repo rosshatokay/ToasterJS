@@ -1,0 +1,116 @@
+$transition: cubic-bezier(.165,.84,.44,1)
+$primary: #127fe7
+
+body *, *
+  box-sizing: border-box
+  padding: 0
+  margin: 0
+
+body::-webkit-scrollbar
+  width: 10px
+
+body::-webkit-scrollbar-thumb
+  border-right: 4px white solid
+  background-color: #555
+  border-radius: 100px
+  background-clip: padding-box
+
+body
+  background-color: #f4f4f6
+  font-family: 'GT Walsheim Pro'
+
+.flex
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+
+.align-center
+  align-items: center
+
+.justify-center
+  justify-content: center
+
+a
+  color: inherit
+  text-decoration: none
+
+button
+  border: none
+
+.btn
+  background-color: #111
+  color: white
+  padding: 20px 30px
+  font-size: 14px
+  font-weight: 600
+  border-radius: 10px
+  cursor: pointer
+  transition: 0.3s $transition
+  &.primary
+    background-color: $primary
+    color: white
+    &:hover
+      background-color: #0062bf
+  &:active
+    transform: scale(.95)
+
+
+aside
+  width: 250px
+  height: 100vh
+  position: fixed
+  top: 0
+  left: 0
+  padding: 40px
+  padding-top: 100px
+  h4
+    font-size: 18px
+    font-weight: 700
+    margin-bottom: 10px
+    color: #0A1124
+  a
+    font-size: 18px
+    color: rgba(#0A1124,.5)
+    &:hover
+      color: #0A1124
+  ul
+    list-style-type: none
+    margin-bottom: 20px
+    li
+      margin-bottom: 5px
+
+.container
+  max-width: 800px
+  width: 100%
+  margin: 0 auto
+
+article
+  margin-top: 100px
+  h1
+    font-size: 64px
+    font-weight: 700
+    letter-spacing: -.03em
+    color: #0a1124
+  h2
+    font-size: 26px
+    font-weight: 400
+    margin: 20px 0 30px 0
+    color: #5f626c
+  h3
+    font-size: 28px
+    margin-bottom: 10px
+    font-weight: 700
+    color: #0A1124
+  p
+    font-size: 20px
+    color: #5f626c
+    font-weight: 400
+  section
+    margin-top: 50px
+  ul
+    margin-top: 20px
+    list-style-position: inside
+    li
+      font-size: 20px
+  .gist
+    margin: 40px 0

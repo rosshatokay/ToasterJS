@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+
+  <script src="/src/toaster.js" charset="utf-8"></script>
+
+  <link rel="stylesheet" href="/src/app.css">
+  <link rel="stylesheet" href="/src/toaster.css">
+</head>
+<body>
+
+  <div class="flex">
+    <aside>
+      <h4>Overview</h4>
+      <ul>
+        <li><a href="">Introduction</a></li>
+        <li><a href="">Install</a></li>
+      </ul>
+      <h4>Properties</h4>
+      <ul>
+        <li><a href="">Gettings started</a></li>
+        <li><a href="">Make them stick</a></li>
+        <li><a href="">Change position</a></li>
+        <li><a href="">Embed HTML</a></li>
+      </ul>
+    </aside>
+
+    <div class="container">
+      <article class="introduction">
+        <h1>Introduction</h1>
+        <h2>The complete documentation reference of the ToasterJS Library, a&nbspJavaScript library made for displaying non-blockable toaster notifications.</h2>
+
+        <section>
+          <h3>Install</h3>
+          <p>The quickest way to implement ToasterJS is to use the hosted version on cdnjs</p>
+          <script src="https://gist.github.com/rosshatokay/365e0c2d2a889d65ac6af83e2080f973.js"></script>
+        </section>
+
+        <section>
+          <h3>Getting started</h3>
+          <p>To generate a basic toast, i.e upon clicking a button, call a <b>$.toast</b> function</p>
+          <script src="https://gist.github.com/rosshatokay/dee9093e99cedb368e886752b5638c70.js"></script>
+          <button class="btn primary toast-1">Run code</button>
+        </section>
+
+        <section>
+          <h3>Make them stick</h3>
+          <p>If you'd like to have the toasts to not fade away, disable the <b>hideAfter</b> property</p>
+          <script src="https://gist.github.com/rosshatokay/985b7681618e3146211279c917c84709.js"></script>
+          <button class="btn primary toast-2">Run code</button>
+        </section>
+
+        <section>
+          <h3>Change position</h3>
+          <p>Changing the position of the toasts is done by setting the <b>position</b>
+            property to one of the available position classes:</p>
+            <ul>
+              <li>bottom-left</li>
+              <li>bottom-right</li>
+              <li>top-left</li>
+              <li>top-right</li>
+            </ul>
+          <script src="https://gist.github.com/rosshatokay/dbbf4cc59d04e63c3499216c1e0f3212.js"></script>
+          <button class="btn primary toast-3">Run code</button>
+        </section>
+
+        <section>
+          <h3>Embed HTML</h3>
+          <p>You can even change the contents of the toast element to have
+            other HTML elements</p>
+
+          <script src="https://gist.github.com/rosshatokay/dbbf4cc59d04e63c3499216c1e0f3212.js"></script>
+          <button class="btn primary">Run code</button>
+        </section>
+
+      </article>
+    </div>
+  </div>
+
+
+  <script>
+
+    $('.toast-1').click(function(){
+      $.toast({
+        content: "I'm a toaster",
+        position: "top-right"
+      })
+    })
+
+    $('.toast-2').click(function(){
+      $.toast({
+        content: "I'm another toaster",
+        hideAfter: false
+      })
+    })
+
+    $('.toast-3').click(function(){
+      $.toast({
+        content: "I'm toasting on the bottom left",
+        position: "bottom-left"
+      })
+    })
+
+  </script>
+
+</body>
+</html>
