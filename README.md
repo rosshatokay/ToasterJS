@@ -96,3 +96,20 @@ You can even change the contents of the toast element to have other HTML element
   })
 </script>
 ```
+
+#### Default properties
+
+Change the default properties to your liking
+
+```HTML
+<script>
+  $.toast({
+    content: '',
+    position: 'bottom-right',
+    hideClass: 'toast-hide',
+    showClass: 'toast-show',
+    hideAfter: 3000,
+    stacking: true,
+  })
+</script>
+```
