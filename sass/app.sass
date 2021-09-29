@@ -16,8 +16,18 @@ body::-webkit-scrollbar-thumb
   background-clip: padding-box
 
 body
-  background-color: #f4f4f6
   font-family: 'GT Walsheim Pro'
+
+//overrides
+
+a
+  color: inherit
+  text-decoration: none
+
+button
+  border: none
+
+// components
 
 .flex
   display: -webkit-flex
@@ -30,12 +40,8 @@ body
 .justify-center
   justify-content: center
 
-a
-  color: inherit
-  text-decoration: none
-
-button
-  border: none
+.right
+  margin-left: auto
 
 .btn
   background-color: #111
@@ -54,13 +60,50 @@ button
   &:active
     transform: scale(.95)
 
+.container
+  max-width: 800px
+  width: 100%
+
+.reset
+  width: calc(100% - 500px)
+
+// app
+
+nav.top
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  background-color: white
+  z-index: 2
+  height: 65px
+  padding: 0 40px
+  border-bottom: 1px solid #edeff5
+  .logo
+    img
+      display: block
+      height: 25px
+      margin-right: 10px
+    h3
+      font-size: 14px
+      text-transform: uppercase
+      font-weight: 700
+      letter-spacing: 0.05em
+  section a
+    color: rgba(black,.7)
+    &:hover
+      color: black
+
+.aside-b
+  width: 250px
+  height: 100vh
 
 aside
   width: 250px
   height: 100vh
-  position: fixed
+  position: sticky
+  position: -webkit-stikcy
   top: 0
-  left: 0
   padding: 40px
   padding-top: 100px
   h4
@@ -78,11 +121,6 @@ aside
     margin-bottom: 20px
     li
       margin-bottom: 5px
-
-.container
-  max-width: 800px
-  width: 100%
-  margin: 0 auto
 
 article
   margin-top: 100px
@@ -115,8 +153,14 @@ article
   .gist
     margin: 40px 0
 
-
 .toast a
   text-decoration: underline
 .iconify
   margin-right: 10px
+
+.credit
+  color: rgba(black,.6)
+  a
+    color: $primary
+    &:hover
+      text-decoration: underline

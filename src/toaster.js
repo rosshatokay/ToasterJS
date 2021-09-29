@@ -88,8 +88,8 @@ $.toast = function(options) {
 
 // default options for the Toaster library
 $.toast.options = {
-  text: '',
-  position: 'top-right',
+  content: '',
+  position: 'bottom-right',
   hideClass: 'toast-hide',
   showClass: 'toast-show',
   hideAfter: 3000,

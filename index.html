@@ -17,12 +17,22 @@
 </head>
 <body>
 
+  <nav class="top flex align-center">
+    <a href="/" class="logo flex align-center">
+      <img src="https://cdn-icons-png.flaticon.com/512/776/776686.png" alt="">
+      <h3>ToasterJS</h3>
+    </a>
+    <section class="right">
+      <a href="https://github.com/rosshatokay/ToasterJS" target="_blank">View code on Github</a>
+    </section>
+  </nav>
+
   <div class="flex">
     <aside>
       <h4>Overview</h4>
       <ul>
-        <li><a href="">Introduction</a></li>
-        <li><a href="">Install</a></li>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#install">Install</a></li>
       </ul>
       <h4>Properties</h4>
       <ul>
@@ -31,67 +41,80 @@
         <li><a href="#position">Position</a></li>
         <li><a href="#stacking">Stacking</a></li>
         <li><a href="#embed-html">Embed HTML</a></li>
+        <li><a href="#default-properties">Default properties</a></li>
       </ul>
     </aside>
 
-    <div class="container">
-      <article class="introduction">
-        <h1>Introduction</h1>
-        <h2>The complete documentation reference of the ToasterJS Library, a&nbspJavaScript library made for displaying non-blockable toaster notifications.</h2>
+    <div class="reset flex justify-center">
+      <div class="container">
+        <article class="introduction" id="introduction">
+          <h1>Introduction</h1>
+          <h2>The complete documentation reference of the ToasterJS Library, a&nbspJavaScript library made for displaying non-blockable toaster notifications.</h2>
 
-        <section>
-          <h3>Install</h3>
-          <p>The quickest way to implement ToasterJS is to use the hosted version on cdnjs</p>
-          <script src="https://gist.github.com/rosshatokay/365e0c2d2a889d65ac6af83e2080f973.js"></script>
-        </section>
+          <section id="install">
+            <h3>Install</h3>
+            <p>The quickest way to implement ToasterJS is to use the hosted version on cdnjs</p>
+            <script src="https://gist.github.com/rosshatokay/365e0c2d2a889d65ac6af83e2080f973.js"></script>
+          </section>
 
-        <section id="getting-started">
-          <h3>Getting started</h3>
-          <p>To generate a basic toast, i.e upon clicking a button, call a <b>$.toast</b> function</p>
-          <script src="https://gist.github.com/rosshatokay/dee9093e99cedb368e886752b5638c70.js"></script>
-          <button class="btn primary toast-1">Click me to toast!</button>
-        </section>
+          <section id="getting-started">
+            <h3>Getting started</h3>
+            <p>To generate a basic toast, i.e upon clicking a button, call a <b>$.toast</b> function</p>
+            <script src="https://gist.github.com/rosshatokay/dee9093e99cedb368e886752b5638c70.js"></script>
+            <button class="btn primary toast-1">Click me to toast!</button>
+          </section>
 
-        <section id="hide-after">
-          <h3>hideAfter</h3>
-          <p>If you'd like to have the toasts to not fade away, disable the <b>hideAfter</b> property</p>
-          <script src="https://gist.github.com/rosshatokay/985b7681618e3146211279c917c84709.js"></script>
-          <button class="btn primary toast-2">Click me to toast!</button>
-        </section>
+          <section id="hide-after">
+            <h3>hideAfter</h3>
+            <p>If you'd like to have the toasts to not fade away, disable the <b>hideAfter</b> property</p>
+            <script src="https://gist.github.com/rosshatokay/985b7681618e3146211279c917c84709.js"></script>
+            <button class="btn primary toast-2">Click me to toast!</button>
+          </section>
 
-        <section id="position">
-          <h3>Position</h3>
-          <p>Changing the position of the toasts is done by setting the <b>position</b>
-            property to one of the available position classes:</p>
-            <ul>
-              <li>bottom-left</li>
-              <li>bottom-right</li>
-              <li>top-left</li>
-              <li>top-right</li>
-            </ul>
-          <script src="https://gist.github.com/rosshatokay/dbbf4cc59d04e63c3499216c1e0f3212.js"></script>
-          <button class="btn primary toast-3">Click me to toast on the bottom left corner!</button>
-        </section>
+          <section id="position">
+            <h3>Position</h3>
+            <p>Changing the position of the toasts is done by setting the <b>position</b>
+              property to one of the available position classes:</p>
+              <ul>
+                <li>bottom-left</li>
+                <li>bottom-right</li>
+                <li>top-left</li>
+                <li>top-right</li>
+              </ul>
+            <script src="https://gist.github.com/rosshatokay/dbbf4cc59d04e63c3499216c1e0f3212.js"></script>
+            <button class="btn primary toast-3">Click me to toast on the bottom left corner!</button>
+          </section>
 
-        <section id="stacking">
-          <h3>Stacking</h3>
-          <p>Enable or disable stacking of toast elements</p>
+          <section id="stacking">
+            <h3>Stacking</h3>
+            <p>Enable or disable stacking of toast elements</p>
 
-          <script src="https://gist.github.com/rosshatokay/123a2a66cd38b045d7d082974289f1dc.js"></script>
-          <button class="btn primary toast-4">Click me to toast!</button>
-        </section>
+            <script src="https://gist.github.com/rosshatokay/123a2a66cd38b045d7d082974289f1dc.js"></script>
+            <button class="btn primary toast-4">Click me to toast!</button>
+          </section>
 
-        <section id="embed-html">
-          <h3>Embed HTML</h3>
-          <p>You can even change the contents of the toast element to have
-            other HTML elements</p>
+          <section id="embed-html">
+            <h3>Embed HTML</h3>
+            <p>You can even change the contents of the toast element to have
+              other HTML elements</p>
 
-          <script src="https://gist.github.com/rosshatokay/0ab65e78794f943b272b99bf9df26a05.js"></script>
-          <button class="btn primary toast-5">Click me to toast with HTML elements!</button>
-        </section>
+            <script src="https://gist.github.com/rosshatokay/0ab65e78794f943b272b99bf9df26a05.js"></script>
+            <button class="btn primary toast-5">Click me to toast with HTML elements!</button>
+          </section>
 
-      </article>
+          <section id="default-properties">
+            <h3>Default properties</h3>
+            <p>Change the default properties to your liking</p>
+
+            <script src="https://gist.github.com/rosshatokay/3e6b02455d41e0d748f4d06e671984fd.js"></script>
+          </section>
+
+        </article>
+
+        <div style="margin-bottom: 50px;" class="credit">Logo icon made by <a href="https://www.flaticon.com/authors/monkik" target="_blank" title="monkik">monkik</a> from <a href="https://www.flaticon.com/" targt="_blank" title="Flaticon">www.flaticon.com</a></div>
+      </div>
     </div>
+
   </div>
 
 
@@ -100,13 +123,14 @@
     $('.toast-1').click(function(){
       $.toast({
         content: "I'm a toaster",
-        position: "top-right"
+        position: "bottom-right"
       })
     })
 
     $('.toast-2').click(function(){
       $.toast({
         content: "I'm a sticky toaster",
+        position: "bottom-right",
         hideAfter: false
       })
     })
@@ -121,6 +145,7 @@
     $('.toast-4').click(function(){
       $.toast({
         content: "I won't stack!",
+        position: "bottom-right",
         stacking: false
       })
     })
@@ -128,7 +153,7 @@
     $('.toast-5').click(function(){
       $.toast({
         content: '<span class="iconify" data-icon="fluent:warning-24-filled" data-height="24"></span> <a href="/" target="_blank">Toaster link!</a>',
-        position: "bottom-left"
+        position: "bottom-right",
       })
     })
 
