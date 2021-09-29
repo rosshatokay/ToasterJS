@@ -1,5 +1,5 @@
 # ToasterJS
-Create toaster notifications with a single line of code.
+Create toaster notifications with a few lines of code.
 
 For quick examples and demos, head to [toasterjs.github.com](https://toasterjs.github.com/).
 
