@@ -1,11 +1,11 @@
 # ToasterJS
 Create toaster notifications with a few lines of code.
 
-For quick examples and demos, head to [toasterjs.github.com](https://toasterjs.github.com/).
+For quick examples and demos, head to [Live site](https://rosshatokay.github.io/ToasterJS/).
 
 ## Installation
 
-You can install ToasterJS from a hosted version on [cdnjs](https://www.npmjs.com/package/jquery-modal):
+You can install ToasterJS from the repository:
 
 ```html
 <!-- Remember to include jQuery :) -->
@@ -18,7 +18,7 @@ You can install ToasterJS from a hosted version on [cdnjs](https://www.npmjs.com
 
 ## Documentation
 
-You can find the full documentation page [here](https://link.com)
+You can find the full documentation page [here](https://rosshatokay.github.io/ToasterJS/)
 
 ## Getting started
 
